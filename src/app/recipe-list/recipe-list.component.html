@@ -1,0 +1,9 @@
+
+<h3>List Of Recipes</h3>
+
+  <li *ngFor="let recipe of recipes">
+    {{recipe.recipeName}}
+  </li>
+  <mat-toolbar>
+    <button mat-button   routerLink="/RecipeDescription">View Recipe</button>
+  </mat-toolbar>

@@ -1,0 +1,18 @@
+{
+  "Recipes": [
+    {
+      "recipeID": 1,
+      "recipeName": "Penut Butter and jelly",
+      "recipeImage": "typicode",
+      "FoodType": "Snack",
+      "description": "Sweet and savery"
+    },
+    {
+      "recipeID": 2,
+      "recipeName": "Chicken",
+      "recipeImage": "typicode",
+      "FoodType": "Dinner",
+      "description": "Deliscious and savery"
+    }
+  ]
+}
