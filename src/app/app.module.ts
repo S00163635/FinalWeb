@@ -4,7 +4,7 @@ import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {Routes, RouterModule } from '@angular/router';
-import{LocationStrategy,HashLocationStrategy} from '@angular/common';
+import {LocationStrategy,HashLocationStrategy} from '@angular/common';
 import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -20,7 +20,7 @@ import { RecipeDescriptionComponent } from './recipe-description/recipe-descript
 import { MatButtonModule,MatIconModule, MatCardModule, MatFormFieldModule, MatToolbarModule, MatInputModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component'; 
-import {MatMenuModule,} from '@angular/material/menu';
+import { MatMenuModule,} from '@angular/material/menu';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes:Routes = [
@@ -58,10 +58,10 @@ const routes:Routes = [
     HttpModule
      
   ],
-  providers: [RecipeService],
-   // { provide: LocationStrategy, useClass: HashLocationStrategy},
-   // ,
-  //],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy},
+    RecipeService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
