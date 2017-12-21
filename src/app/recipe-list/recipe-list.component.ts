@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {RecipeService} from 'C:/Users/Swagasorus Rex/Desktop/webtest/JustCook_Web_V2-master/JustCook_Web_V2-master/src/app/recipes.service'
+import {RecipeService} from 'C:/Users/User/Desktop/web/webfinal/FinalWeb/src/app/recipes.service'
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 
