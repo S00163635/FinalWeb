@@ -15,6 +15,8 @@ import { RecipeDescriptionComponent } from './recipe-description/recipe-descript
 //materials
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //import{MatCardModule} from '@angular/material'
+
+
 import { MatButtonModule,MatIconModule, MatCardModule, MatFormFieldModule, MatToolbarModule, MatInputModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component'; 
