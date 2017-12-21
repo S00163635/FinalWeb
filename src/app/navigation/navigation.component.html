@@ -1,18 +1,22 @@
-<mat-card>
-  <mat-toolbar>
-    <h2>JustCook</h2>
+<mat-card class="fullpage">
+  <mat-toolbar class="logotoolbar">
+    <h1 class="header">Movie Rental</h1>
     <span class="example-spacer"></span>
     <button mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon></button>    
+    
  
   <mat-menu #appMenu="matMenu">
           <button mat-menu-item  routerLink="/Profile">Profile</button>
-          <button mat-menu-item>Add Recipe</button>
+          <button mat-menu-item>Add Movie Review</button>
           <button mat-menu-item>Logout </button>
         </mat-menu>
       </mat-toolbar>
+    
+
      
-</mat-card>
+
 <app-recipe-search></app-recipe-search>
+</mat-card>
 
 
  
