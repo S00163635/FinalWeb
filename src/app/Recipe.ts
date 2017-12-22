@@ -4,4 +4,7 @@ interface IRecipes{
     recipeImage:string;
     foodType:string;
     description:string;
+    movieID:number;
+    movieName:string;
+    genre:string;
 }
