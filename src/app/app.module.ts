@@ -3,6 +3,7 @@ import {RecipeService} from './recipes.service'
 import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+//CIARA routing imports - routermodule, locationstrategy and hashlocationstrategy 
 import {Routes, RouterModule } from '@angular/router';
 import {LocationStrategy,HashLocationStrategy} from '@angular/common';
 import {HttpModule} from '@angular/http';
@@ -23,6 +24,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MatMenuModule,} from '@angular/material/menu';
 import { ProfileComponent } from './profile/profile.component';
 
+//CIARA this is the paths for routing (components)
 const routes:Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'RecipeDescription',component:RecipeDescriptionComponent},
@@ -43,6 +45,7 @@ const routes:Routes = [
     BrowserModule,
     FormsModule,
      HttpClientModule,
+     //CIARA import for routing 
      RouterModule.forRoot(routes),
      
     //mat
@@ -59,6 +62,7 @@ const routes:Routes = [
      
   ],
   providers: [
+    //CIARA routing providers 
     { provide: LocationStrategy, useClass: HashLocationStrategy},
     RecipeService,
   ],
