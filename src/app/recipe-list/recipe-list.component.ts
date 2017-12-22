@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RecipeService} from '../recipes.service'
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-
+import {FormControl } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -41,9 +41,30 @@ export class RecipeListComponent implements OnInit {
   
     ngOnInit(){
       this._RecipeService.getRecipes().subscribe(recipes =>{
-        
-     // this.recipes = recipes;
+        recipes = recipes;
+        console.log(recipes.Title);
     },
     error => this.errorMessage = <any>error);
 }
+//  data:any={};
+//   private apiurl = 'https://pixabay.com/api/?key=7446425-7870ab1ffa328bc5465e5bf42&q=food'
+//   constructor(private http:Http){
+
+//     this.getData();
+//     this.getImages();
+//   }
+
+
+// getData(){
+// return this.http.get(this.apiurl).map((res:Response) => res.json())
+// }
+// getImages(){
+//   this.getData().subscribe(data => {
+//     console.log(data);
+//   })
+// }
+
 }
+
+
+
