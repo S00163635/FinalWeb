@@ -1,7 +1,7 @@
 interface IRecipes{
-    recipeID:number;
-    recipeName:string;
-    recipeImage:string;
-    foodType:string;
-    description:string;
+    Title:string;
+    Year:Number;
+    Rated:string;
+    Poster:string;
+    Plot:string;
 }

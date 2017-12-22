@@ -2,7 +2,7 @@ import {HttpClientModule,HttpClient } from '@angular/common/http';
 import {RecipeService} from './recipes.service'
 import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {Routes, RouterModule } from '@angular/router';
 import {LocationStrategy,HashLocationStrategy} from '@angular/common';
 import {HttpModule} from '@angular/http';
@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDescriptionComponent } from './recipe-description/recipe-description.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 //materials
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -55,7 +56,9 @@ const routes:Routes = [
     MatMenuModule,
     MatIconModule,
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
      
   ],
   providers: [

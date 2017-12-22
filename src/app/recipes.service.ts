@@ -5,15 +5,21 @@ import { Injectable } from '@angular/core';
 import {HttpClient,HttpErrorResponse } from '@angular/common/http';
 import {Http} from "@angular/http";
 //import {IAPIRecipes} from "./APIrecipes";
-
+import 'rxjs/add/observable/throw';
+import 'rxjs/add/observable/forkJoin';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
 @Injectable()
 
 //Fidels Service
 export class RecipeService {
+
+
+
+ private _RecipesUrl =   'http://www.omdbapi.com/?i=tt3896198&apikey=78edb52d';
   
- private _RecipesUrl =   'https://www.googleapis.com/customsearch/v1?key=AIzaSyApsE_UdsJD9wYiDnqNejoHKufuMmFp_c8&cx=005639442794109511634:m14ey8csloy&q=food';
-  
- constructor(private _http: HttpClient) { }
+constructor(private _http: HttpClient) { }
 
  getRecipes():Observable<IRecipes>{
    console.log("In RecSer: ");
@@ -29,5 +35,20 @@ export class RecipeService {
     
  } 
 
-}
+// getMovies(ids:string[]):Observable<IRecipes[]>
+// {
+//   const movieGet:Observable<IRecipes>[] = ids.map(id =>this.getMovieById(id));
+//   return Observable.forkJoin(movieGet);
+// }
 
+//  getMovieById(id: string): Observable<IRecipes> {
+//     return this._http.get<IRecipes>(`${this._http}&&i=${id}`)
+//       .do(data => console.log('Movie: ' + JSON.stringify(data)))
+//       .catch(this.handleError)
+//   }
+
+//   private handleError(err : HttpErrorResponse){
+//     return Observable.throw(err.message);
+//   }
+
+}
