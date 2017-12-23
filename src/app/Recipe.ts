@@ -4,4 +4,5 @@ interface IRecipes{
     Rated:string;
     Poster:string;
     Plot:string;
+    movieName:string;
 }
