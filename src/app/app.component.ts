@@ -9,6 +9,18 @@ import { RecipeService } from './recipes.service';
 })
 export class AppComponent  {
  
+//EMILYS 
+  user = null;
+
+  constructor(
+      // private auth: AuthService
+    ) { }
+
+      
+  ngOnInit() {
+      // this.auth.getAuthState().subscribe(
+      //   (user) => this.user = user);
+    }
 
 
   

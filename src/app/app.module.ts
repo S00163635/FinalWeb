@@ -10,6 +10,12 @@ import {HttpModule} from '@angular/http';
 //CIARA firebase import causing an error so commented out 
 //import { AngularFireModule } from 'angularfire2';
 
+//EMILYS new version of installing AngularFire2 4.0
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
+// import { environment } from 'environments/environment';
+
 import { AppComponent } from './app.component';
 import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
@@ -62,6 +68,12 @@ const routes:Routes = [
      RouterModule.forRoot(routes),
      // CIARA thi is firebase import although linked to import at top of page and causing major error so commented out
      //AngularFireModule.initializeApp(firebaseConfig),
+     
+     //EMILYS NEW VERSION OF THE INSTALLATION OF ANGULARFIRE2 4.0
+    //  AngularFireModule.initializeApp(environment.firebase, 'movie-rental'),
+    //  AngularFireDatabaseModule,
+    //  AngularFireAuthModule,     
+     
      
     //mat
     MatInputModule,
